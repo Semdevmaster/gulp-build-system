@@ -34,21 +34,6 @@ export {
   faviconsCopy,
 }
 
-/*export async function makeJpg() {
-  // const extName = path.extname(file)
-  // const fileName = path.basename(file, extName)
-  // const pathFile = path.dirname(file)
-  const buffer = await sharp('src/img/og_default.jpg')
-    .jpeg({
-      quality: 80,
-      chromaSubsampling: '4:2:0',
-      progressive: true,
-      mozjpeg: true
-    })
-    .toBuffer()
-  await sharp(buffer).toFile(`src/img/og_default.jpg`)
-}*/
-
 const {series, parallel} = gulp
 
 export const build =
