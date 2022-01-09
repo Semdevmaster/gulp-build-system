@@ -1,0 +1,10 @@
+.idea
+node_modules
+*.log
+*.rar
+*.zip
+Thumbs.db
+.DS_Store
+.publish
+.vscode
+__MACOSX
