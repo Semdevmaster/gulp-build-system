@@ -4,9 +4,14 @@ import {destinationPaths, localHostForProxy} from '../config.mjs'
 export const devServer = (cb) => {
   server().init({
     host: localHostForProxy,
-    proxy: localHostForProxy,
+    proxy: {
+      target: `https://${localHostForProxy}`
+    },
     port: 3000,
-    https: true,
+    https: {
+      cert: `${process.cwd()}/docker/nginx/ssl/default.pem`,
+      key: `${process.cwd()}/docker/nginx/ssl/default-key.pem`,
+    },
     files: [
       `${destinationPaths.root}assets/**/*.*`,
       `${destinationPaths.root}core/elements/**/*.*`,

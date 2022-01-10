@@ -2,7 +2,7 @@
 const baseSourcePath = './src/'
 
 /** Путь до папки назначения **/
-const baseDestinationPath = './www/'
+const baseDestinationPath = './app/'
 
 /** Конфиг с путями до папок с файлами, используется в задачах **/
 const config = {
