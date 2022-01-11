@@ -20,7 +20,16 @@ const config = {
     assets: `${baseDestinationPath}/assets/`, //Путь до папки со всеми файлами фронта (ассетами)
   },
   isProduction: process.env.NODE_ENV === 'production', //Определяет режим сборки - разработка или продакшн
-  localHostForProxy: 'gulp-new.loc' //Локальный домен для разработки
+  localHostForProxy: 'gulp-build-system.loc', //Локальный домен для разработки
+  localCertFile: 'gulp-build-system.loc+4.pem', //Имя файла сертификата
+  localCertKeyFile: 'gulp-build-system.loc+4-key.pem' //Имя файла с ключем сертификата
 }
 
-export const {isProduction, sourcePaths, destinationPaths, localHostForProxy} = config
+export const {
+  isProduction,
+  sourcePaths,
+  destinationPaths,
+  localHostForProxy,
+  localCertFile,
+  localCertKeyFile
+} = config

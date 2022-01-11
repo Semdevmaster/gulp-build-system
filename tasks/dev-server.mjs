@@ -1,5 +1,5 @@
 import {create as server} from 'browser-sync'
-import {destinationPaths, localHostForProxy} from '../config.mjs'
+import {destinationPaths, localCertFile, localCertKeyFile, localHostForProxy} from '../config.mjs'
 
 export const devServer = (cb) => {
   server().init({
@@ -9,8 +9,8 @@ export const devServer = (cb) => {
     },
     port: 3000,
     https: {
-      cert: `${process.cwd()}/docker/nginx/ssl/default.pem`,
-      key: `${process.cwd()}/docker/nginx/ssl/default-key.pem`,
+      cert: `${process.cwd()}/docker/nginx/ssl/${localCertFile}`,
+      key: `${process.cwd()}/docker/nginx/ssl/${localCertKeyFile}`,
     },
     files: [
       `${destinationPaths.root}assets/**/*.*`,
