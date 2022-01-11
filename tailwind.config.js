@@ -1,10 +1,17 @@
 module.exports = {
   content: [
-    './www/core/elements/**/*.tpl',
-    './www/assets/js/**/*.js'
+    './app/core/elements/**/*.tpl',
+    './app/assets/js/**/*.js'
   ],
   darkMode: 'class',
   theme: {
+    screens: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1480px'
+    },
     extend: {
       colors: {
         primary: '#23d1a9',
@@ -27,8 +34,12 @@ module.exports = {
       }
     }
   },
+  corePlugins: {
+    container: false
+  },
   plugins: [
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
+    require('@tailwindcss/line-clamp'),
   ],
 }
