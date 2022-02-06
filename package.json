@@ -34,6 +34,7 @@
     "css production": "cross-env NODE_ENV=production gulp stylesBuild",
     "js production": "cross-env NODE_ENV=production gulp scriptsBuild",
     "libs production": "gulp libsBuild",
+    "favicons production": "gulp faviconsBuild faviconsCopy --series",
     "img production": "cross-env NODE_ENV=production gulp imagesBuild",
     "sprite production": "gulp svgSpriteBuild svgSpriteCopy --series",
     "clean assets": "gulp cleanAssets",
