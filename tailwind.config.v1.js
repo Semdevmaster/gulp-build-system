@@ -1,9 +1,8 @@
 module.exports = {
   content: [
-    './app/core/elements/**/*.tpl',
-    './app/assets/js/**/*.js'
+    './app/core/app/**/*.tpl',
+    './app/assets/v1/js/**/*.js'
   ],
-  darkMode: 'class',
   theme: {
     screens: {
       'sm': '640px',

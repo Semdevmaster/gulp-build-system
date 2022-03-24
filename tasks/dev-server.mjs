@@ -9,12 +9,12 @@ export const devServer = (cb) => {
     },
     port: 3000,
     https: {
-      cert: `${process.cwd()}/docker/nginx/ssl/${localCertFile}`,
-      key: `${process.cwd()}/docker/nginx/ssl/${localCertKeyFile}`,
+      cert: `${process.cwd()}/server/nginx/ssl/${localCertFile}`,
+      key: `${process.cwd()}/server/nginx/ssl/${localCertKeyFile}`,
     },
     files: [
-      `${destinationPaths.root}assets/**/*.*`,
-      `${destinationPaths.root}core/elements/**/*.*`,
+      `${destinationPaths.assets}**/*.*`,
+      `${destinationPaths.root}core/app/**/*.*`,
       `!${destinationPaths.root}assets/components/**/*.*`
     ],
     ui: false,

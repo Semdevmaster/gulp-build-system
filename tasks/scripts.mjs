@@ -29,9 +29,9 @@ export const scriptsBuild = (cb) => {
     .pipe(gulpWebpack(webpackConfig(), webpack))
     .pipe(gulpIf(isProduction, hash()))
     .pipe(dest(destinationPaths.assets))
-    .pipe(gulpIf(isProduction, hash.manifest(`${destinationPaths.root}assets/assets.json`, {
+    .pipe(gulpIf(isProduction, hash.manifest(`${destinationPaths.assets}assets.json`, {
       deleteOld: true,
-      sourceDir: `${destinationPaths.root}assets`
+      sourceDir: `${destinationPaths.assets}`
     })))
     .pipe(gulpIf(isProduction, dest('./')))
   cb()

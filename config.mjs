@@ -1,3 +1,6 @@
+/** Версия файлов для фронта (тема) **/
+const assetsVersionPrefix = 'v1'
+
 /** Путь до папки с исходниками **/
 const baseSourcePath = './src/'
 
@@ -11,18 +14,18 @@ const config = {
   },
   destinationPaths: {
     root: baseDestinationPath, //Корень назначения
-    html: `${baseDestinationPath}/core/elements/`, //Путь до файлов разметки
-    css: `${baseDestinationPath}/assets/css/`, //Путь до файлов стилей
-    js: `${baseDestinationPath}/assets/js/`, //Путь до файлов скриптов
-    img: `${baseDestinationPath}/assets/`, //Путь до файлов с картинками (только интерфейсные)
-    libs: `${baseDestinationPath}/assets/libs/`, //Путь до файлов библиотек
-    fonts: `${baseDestinationPath}/assets/fonts/`, //Путь до файлов шрифтов
-    assets: `${baseDestinationPath}/assets/`, //Путь до папки со всеми файлами фронта (ассетами)
+    css: `${baseDestinationPath}/assets/${assetsVersionPrefix}/css/`, //Путь до файлов стилей
+    js: `${baseDestinationPath}/assets/${assetsVersionPrefix}/js/`, //Путь до файлов скриптов
+    img: `${baseDestinationPath}/assets/${assetsVersionPrefix}/`, //Путь до файлов с картинками (только интерфейсные)
+    libs: `${baseDestinationPath}/assets/${assetsVersionPrefix}/libs/`, //Путь до файлов библиотек
+    fonts: `${baseDestinationPath}/assets/${assetsVersionPrefix}/fonts/`, //Путь до файлов шрифтов
+    assets: `${baseDestinationPath}/assets/${assetsVersionPrefix}/`, //Путь до папки со всеми файлами фронта (ассетами)
   },
   isProduction: process.env.NODE_ENV === 'production', //Определяет режим сборки - разработка или продакшн
   localHostForProxy: 'gulp-build-system.loc', //Локальный домен для разработки
-  localCertFile: 'gulp-build-system.loc+4.pem', //Имя файла сертификата
-  localCertKeyFile: 'gulp-build-system.loc+4-key.pem' //Имя файла с ключем сертификата
+  localCertFile: 'gulp-build-system.loc.pem', //Имя файла сертификата
+  localCertKeyFile: 'gulp-build-system.loc-key.pem', //Имя файла с ключем сертификата
+  tailwindcssConfigName: `tailwind.config.${assetsVersionPrefix}.js`
 }
 
 export const {
@@ -31,5 +34,6 @@ export const {
   destinationPaths,
   localHostForProxy,
   localCertFile,
-  localCertKeyFile
+  localCertKeyFile,
+  tailwindcssConfigName
 } = config
