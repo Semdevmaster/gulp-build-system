@@ -96,24 +96,20 @@ async function optimizePng(file) {
 
 async function makeWebp(file) {
   console.log('Converting a file to webp: ', file)
-  const extName = path.extname(file)
-  const fileName = path.basename(file, extName)
-  const pathFile = path.dirname(file)
+  const {dir, name} = path.parse(file)
   return sharp(file)
     .webp({
       quality: 80, smartSubsample: false, reductionEffort: 6
     })
-    .toFile(`${pathFile}/${fileName}.webp`)
+    .toFile(`${dir}/${name}.webp`)
 }
 
 async function makeAvif(file) {
   console.log('Converting a file to avif: ', file)
-  const extName = path.extname(file)
-  const fileName = path.basename(file, extName)
-  const pathFile = path.dirname(file)
+  const {dir, name} = path.parse(file)
   return sharp(file)
     .avif({
       quality: 50, speed: 0, chromaSubsampling: '4:4:4'
     })
-    .toFile(`${pathFile}/${fileName}.avif`)
+    .toFile(`${dir}/${name}.avif`)
 }
