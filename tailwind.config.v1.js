@@ -1,3 +1,4 @@
+/** @type {import('tailwindcss').Config}*/
 module.exports = {
   content: [
     './app/core/app/**/*.tpl',
@@ -30,7 +31,7 @@ module.exports = {
           'OpenSans',
           'sans-serif'
         ]
-      }
+      },
     }
   },
   corePlugins: {
