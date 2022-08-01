@@ -44,19 +44,19 @@
   },
   "dependencies": {
     "jquery": "^3.6.0",
-    "photoswipe": "^5.2.7"
+    "photoswipe": "^5.3.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.2",
-    "@babel/preset-env": "^7.18.2",
-    "@babel/register": "^7.17.7",
+    "@babel/core": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
+    "@babel/register": "^7.18.9",
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/line-clamp": "^0.4.0",
-    "@tailwindcss/typography": "^0.5.2",
+    "@tailwindcss/typography": "^0.5.4",
     "babel-loader": "^8.2.5",
     "browser-sync": "^2.27.10",
     "cross-env": "^7.0.3",
-    "del": "^6.1.1",
+    "del": "^7.0.0",
     "gulp": "^4.0.2",
     "gulp-cached": "^1.1.1",
     "gulp-cli": "^2.3.0",
@@ -78,12 +78,12 @@
     "postcss-combine-media-query": "^1.0.1",
     "postcss-csso": "^6.0.0",
     "postcss-import": "^14.1.0",
-    "postcss-preset-env": "^7.7.1",
-    "sharp": "^0.30.6",
-    "tailwindcss": "^3.1.2",
+    "postcss-preset-env": "^7.7.2",
+    "sharp": "^0.30.7",
+    "tailwindcss": "^3.1.7",
     "tailwindcss-pseudo-elements": "^2.0.0",
     "tailwindcss-ripple": "^0.7.1",
-    "webpack": "^5.73.0",
+    "webpack": "^5.74.0",
     "webpack-stream": "^7.0.0"
   }
 }
