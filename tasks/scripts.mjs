@@ -20,6 +20,9 @@ const webpackConfig = () => ({
   resolveLoader: {
     modules: [`${process.cwd()}/gulp/node_modules`]
   },
+  resolve: {
+    modules: [`${process.cwd()}/gulp/node_modules`]
+  },
   devtool: isProduction ? undefined : 'eval'
 })
 
